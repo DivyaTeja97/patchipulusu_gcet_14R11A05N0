@@ -172,6 +172,13 @@ public class StudentGroup implements StudentArrayOperation{
 	@Override
 	public Student getNextStudent(Student student) {
 		// Add your implementation here
-		return null;
+		if(student==null){
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int index=student.getId();
+		return students[index+1];
 	}
+}
 }
